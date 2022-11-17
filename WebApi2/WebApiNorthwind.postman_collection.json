@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "e5f1e3c4-11ff-4af7-9e03-924e42969321",
+		"name": "WebApiNorthwind",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19607121"
+	},
+	"item": [
+		{
+			"name": "List all customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44336/api/customer",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44336",
+					"path": [
+						"api",
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get one customer for id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44336/api/customer/ALFKI",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44336",
+					"path": [
+						"api",
+						"customer",
+						"ALFKI"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get customer phone from Company name, contact name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44336/api/customer/Bon app'/Laurence Lebihan",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44336",
+					"path": [
+						"api",
+						"customer",
+						"Bon app'",
+						"Laurence Lebihan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modify customer",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerId\": \"ALFKI\",\r\n    \"companyName\": \"Alfreds Futterkiste\",\r\n    \"contactName\": \"Maria Anders\",\r\n    \"contactTitle\": \"Sales Representative\",\r\n    \"address\": \"Obere Str. 57\",\r\n    \"city\": \"Berlin\",\r\n    \"region\": null,\r\n    \"postalCode\": \"12209\",\r\n    \"country\": \"Germany\",\r\n    \"phone\": \"030-0074321\",\r\n    \"fax\": \"030-0076542\",\r\n    \"customerCustomerDemo\": [],\r\n    \"orders\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44336/api/customer/ALFKI",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44336",
+					"path": [
+						"api",
+						"customer",
+						"ALFKI"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete customer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44336/api/customer/id",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44336",
+					"path": [
+						"api",
+						"customer",
+						"id"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all categories",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get category by id",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
